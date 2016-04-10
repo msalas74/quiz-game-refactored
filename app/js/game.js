@@ -41,14 +41,14 @@ Game.prototype.loadQuiz = function (emperor) {
 
 
 //initialize function object
-Game.prototype.init = function() {	
+Game.prototype.init = function(emperor) {	
 
 	//clear win/lose prompt and reset button
 	$('input:button').val('conquer');
 	$('#msg').text('');
 
 	//reset back to the first question and load quiz items
-	this.loadQuiz(Sulla);
+	this.currentEmperor = this.loadQuiz(emperor);
 
 	//reset visual timeline score board
 	$('.timeline').html('<div class="armor-icon"></div><img src="img/time.png"><br><p class="left">BCE</p><p class="right">CE</p>');

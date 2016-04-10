@@ -14,7 +14,7 @@ $(document).ready(function() {
 	game.emperorsList.push(Tiberius);
 
 
-	game.init();
+	game.init(game.emperorsList[0]);
 
 	//scoreboard
 	var score = new ScoreBoard();
@@ -35,7 +35,7 @@ $(document).ready(function() {
 				game.points = 0;
 				game.xPosition = 0;
 				$('input:button').val('conquer');
-				game.init();
+				game.init(game.emperorsList[0]);
 				
 			} else {
 
