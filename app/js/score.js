@@ -13,24 +13,27 @@ ScoreBoard.prototype.moveIcon = function(correct, game) {
 	game.xPosition = xPosition;
 	var x = xPosition + "rem";
 
-	if (correct) {
-		$('.armor-icon').css('background-image','url(' + game.armor[game.points] +')');
-	}
-
+	
 
 	$('.armor-icon').animate({left:x}, 1000, function(){
 		$('.armor-icon').attr('left',x);
 
 		if (correct) {
-			var current = game.current - 1;
-			console.log(current);
+		$('.armor-icon').css('background-image','url(' + game.armor[game.points] +')');
+		}
 
-			$('.timeline').append('<span id="point'+ game.points +'" class="score"></span>');
 
-			$('.timeline #point' + game.points).css('left', xPrevious);
+		if (correct) {
+			//var current = game.current - 1;
+			//console.log(current);
+
+			$('.timeline').append('<span id="point'+ (game.current - 1) +'" class="score"></span>');
+
+			$('.timeline #point' + (game.current - 1)).css('left', xPrevious);
 				
 
 		} else {
+			$('.armor-icon').css('background-image','url(' + game.armor[game.points] +')');
 			console.log("not correct");
 				
 		}

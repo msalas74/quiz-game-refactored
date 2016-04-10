@@ -9,6 +9,10 @@ $(document).ready(function() {
 	game.emperorsList.push(Hadrian);
 	game.emperorsList.push(Julius);
 
+	game.emperorsList.push(Marcus);
+	game.emperorsList.push(Pompey);
+	game.emperorsList.push(Tiberius);
+
 
 	game.init();
 
@@ -22,32 +26,45 @@ $(document).ready(function() {
 			var picked = $('input:checked').val();
 			//console.log("picked: " + picked);
 
+			//check for game over
+
+
 			//check for first game
-			if (game.current >= game.emperorsList.length) {
+			if (game.current > game.emperorsList.length) {
 				game.current = 1;
 				game.points = 0;
 				game.xPosition = 0;
+				$('input:button').val('conquer');
 				game.init();
-				console.log("end of game");
+				
 			} else {
+
 
 				//check for answer
 				if (picked === game.currentEmperor) {
-					game.currentEmperor = game.loadQuiz(game.emperorsList[game.current]);
+					console.log(picked === game.currentEmperor);
 					game.points++;
-					game.current++;
 					score.updateScore(game);
 					score.moveIcon(true, game);
 				} else {
-					game.currentEmperor = game.loadQuiz(game.emperorsList[game.current]);
-					game.points--;
-					game.current++;
+					console.log(picked === game.currentEmperor);
+					//if (!game.points <=0) game.points--;
 					score.updateScore(game);
 					score.moveIcon(false, game);
 				}
 
+				game.current++;
 
-				console.log(picked === game.currentEmperor);
+				if (game.current <= game.emperorsList.length){
+					console.log("current Emperor " + game.emperorsList[game.current - 1].emperor);
+					game.currentEmperor = game.loadQuiz(game.emperorsList[game.current - 1]);
+
+				} else {
+					console.log("end of game");
+					$('input:button').val('reset');
+				}
+
+				//console.log(picked === game.currentEmperor);
 			};
 
 	}); 
