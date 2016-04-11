@@ -19,7 +19,6 @@ var buffer = require('vinyl-buffer');
 var environment = "production";
 
 var jsFiles = [
-	'node_modules/jquery/dist/jquery.min.js',
 	'app/js/quiz.js',
 	'app/js/score.js',
 	'app/js/game.js',
@@ -29,7 +28,7 @@ var jsFiles = [
 gulp.task('js', function(){
 	gulp.src(jsFiles)
 		.pipe(concat('app.js'))
-		//.pipe(browserify())
+		.pipe(browserify())
 		.pipe(uglify())
 		.pipe(gulp.dest('build/js'));
 });
