@@ -4,7 +4,7 @@ var ScoreBoard = function () {};
 ScoreBoard.prototype.updateScore = function(game) {
 	//game.points = game.points + points;
 	$('#msg').text('You got ' + game.points + ' out of ' + game.emperorsList.length);
-}
+};
 
 ScoreBoard.prototype.moveIcon = function(correct, game) {
 	var xPosition = game.xPosition + 5;
@@ -39,5 +39,5 @@ ScoreBoard.prototype.moveIcon = function(correct, game) {
 		}
 
 	});
-}
+};
 

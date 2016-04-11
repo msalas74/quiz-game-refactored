@@ -35,10 +35,10 @@ Marcus.multiChoice = ["Marcus", "Tiberius", "Sulla", "Pompey"];
 
 var Pompey = new GameQuiz("Pompey");
 Pompey.emperorPath = "./img/emporers/Pompey.svg"; 
-Pompey.quiz =	"The Roman Emperor from 161 to 180. He ruled with Lucius Verus as co-emperor from 161 until Verus' death in 169. He was the last of the Five Good Emperors, and is also considered one of the most important Stoic philosophers.";
+Pompey.quiz =	"A military and political leader of the late Roman Republic. He came from a wealthy Italian provincial background, and his father had been the first to establish the family among the Roman nobility. Military success in Sulla's Second Civil War led him to adopt the nickname Magnus, \"the Great\". He was consul three times and celebrated three triumphs.";
 Pompey.multiChoice = ["Augustus", "Hadrian", "Pompey", "Julius"];
 
 var Tiberius = new GameQuiz("Tiberius");
 Tiberius.emperorPath = "./img/emporers/Tiberius.svg"; 
-Tiberius.quiz =	"The Roman Emperor from 161 to 180. He ruled with Lucius Verus as co-emperor from 161 until Verus' death in 169. He was the last of the Five Good Emperors, and is also considered one of the most important Stoic philosophers.";
+Tiberius.quiz =	"One of Rome's greatest generals; his conquest of Pannonia, Dalmatia, Raetia, and temporarily, parts of Germania laid the foundations for the northern frontier. But he came to be remembered as a dark, reclusive, and sombre ruler who never really desired to be emperor; Pliny the Elder called him tristissimus hominum, \"the gloomiest of men.\"";
 Tiberius.multiChoice = ["Sulla", "Tiberius", "Hadrian", "Pompey"];

@@ -65,7 +65,7 @@ $(document).ready(function() {
 				}
 
 				//console.log(picked === game.currentEmperor);
-			};
+			}
 
 	}); 
 	

@@ -26,7 +26,7 @@ Game.prototype.loadQuiz = function (emperor) {
 	var count = this.emperor.multiChoice.length;
 	//fillout the multi answer
 	for (var i = 0; i<count; i++) {
-		var t = document.createTextNode(this.emperor.multiChoice[i]);
+		t = document.createTextNode(this.emperor.multiChoice[i]);
 		var ans = i + 1;
 		$('span#opt' + i).html(t);
 
