@@ -46,13 +46,15 @@ gulp.task('jshint', function(){
 
 //Compile Sass task
 gulp.task('sass', function(){
-	return sass([ 'app/scss/*.scss', 'app/scss/**/*.scss'], {
+	return sass( ['app/scss/*.scss', 'app/scss/**/*.scss'] , {
 		sourcemap: true,
-		style:'expanded'
+		style:'compressed' //expanded
+
 	})
 	.on('error', function(err){
 		console.log('Error!', err.message);
 	})
+	.pipe(concat('styles.css'))
 	.pipe(sourcemaps.write())
 	.pipe(gulp.dest('build/css'));
 });
@@ -113,7 +115,12 @@ gulp.task('webserver', function(){
 
 
 //Build task
-gulp.task('build', ['jshint', 'sass', 'html', 'js', 'styles', 'fonts', 'images']);
+if (!environment == 'production') {
+	gulp.task('build', ['jshint', 'sass', 'html', 'js', 'styles', 'fonts', 'images']);
+} else {
+	gulp.task('build', ['jshint', 'sass', 'html', 'js', 'fonts', 'images']);
+}
+
 
 //Default task
 gulp.task('default', ['jshint', 'sass', 'watch', 'webserver']);
