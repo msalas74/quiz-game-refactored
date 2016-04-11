@@ -1,11 +1,12 @@
 var gulp = require('gulp');
 
 var jshint = require('gulp-jshint');
+var browserify = require('gulp-browserify');
 var sass = require('gulp-ruby-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var webserver = require('gulp-webserver');
 var imagemin = require('gulp-imagemin');
-var browserify = require('browserify');
+var imageminJpegtran = require('imagemin-jpegtran');
 var uglify = require('gulp-uglify');
 var minifyHTML = require('gulp-minify-html');
 var concat = require('gulp-concat');
@@ -18,7 +19,6 @@ var buffer = require('vinyl-buffer');
 var environment = "production";
 
 var jsFiles = [
-	'app/bower_components/jquery/dist/jquery.min.js',
 	'app/js/quiz.js',
 	'app/js/score.js',
 	'app/js/game.js',
@@ -28,6 +28,7 @@ var jsFiles = [
 gulp.task('js', function(){
 	gulp.src(jsFiles)
 		.pipe(concat('app.js'))
+		.pipe(browserify())
 		.pipe(uglify())
 		.pipe(gulp.dest('build/js'));
 });
@@ -39,14 +40,9 @@ gulp.task('jshint', function(){
 		.pipe(jshint.reporter('default'));
 });
 
-gulp.task('scripts', function() {
-  return browserify(jsFiles)
-    .bundle()
-    .pipe(source('app.js'))
-    .pipe(buffer())
-    .pipe(uglify())
-    .pipe(gulp.dest('build/js'));
-});
+
+//=====TODO================================
+
 
 //Compile Sass task
 gulp.task('sass', function(){
@@ -70,7 +66,6 @@ gulp.task('watch', function(){
 
 });
 
-
 //Minify task
 gulp.task('html', function(){
 	if (environment === "production") {
@@ -91,13 +86,13 @@ gulp.task('styles', function() {
 		.pipe(gulp.dest('build/css'));
 });
 
-//image optimize task * does not work* TODO find alternative
+//image optimize task =====================
 gulp.task('images', function() {
 	return gulp.src(['app/img/*', 'app/img/**/*'])
-		/*.pipe(imagemin({
+		.pipe(imagemin({
 			progressive: true,
-			use:[imageminJpegtran()]
-		}))*/
+			use:[imageminJpegtran({ptogressive: true})]
+		}))
 		.pipe(gulp.dest('build/img'));
 });
 

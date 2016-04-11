@@ -4,7 +4,6 @@
   "description": "",
   "main": "gulpfile.js",
   "dependencies": {
-    "browserify": "^13.0.0",
     "gulp": "^3.9.0",
     "gulp-bower": "0.0.11",
     "gulp-concat": "^2.6.0",
@@ -23,7 +22,11 @@
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp-browserify": "^0.5.1",
+    "imagemin-jpegtran": "^4.3.2",
+    "jquery": "^2.2.3"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cleanModules": "rimraf node_modules",
