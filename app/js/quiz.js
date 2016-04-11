@@ -1,5 +1,5 @@
 //for JQuery
-var $ = require('jquery');
+//var $ = require('jquery');
 
 //create quiz object literal ** refactor **
 var GameQuiz = function(emperor) {
