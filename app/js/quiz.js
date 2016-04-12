@@ -11,7 +11,7 @@ var GameQuiz = function(emperor) {
 
 //create new object for Sulla and init all properties===== TODO convert to JSON===============
 var Sulla = new GameQuiz("Sulla");
-Sulla.emperorPath = "./img/emporers/sulla.svg";
+Sulla.emperorPath = "./img/emporers/Sulla.svg";
 Sulla.quiz = "This Roman was a general and statesman.  He unconstitutionally marched his armies into Rome and defeated Marius in battle.  This action consequently paved the way for future emporers.";
 Sulla.multiChoice = ["Augustus", "Hadrian", "Sulla", "Julius"];
 

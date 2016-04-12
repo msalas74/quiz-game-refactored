@@ -48,7 +48,7 @@ gulp.task('jshint', function(){
 gulp.task('sass', function(){
 	return sass('app/scss/style.scss' , {
 		sourcemap: true,
-		style:'expanded' //expanded
+		style:'compressed' //expanded
 
 	})
 	.on('error', function(err){
