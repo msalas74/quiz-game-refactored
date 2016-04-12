@@ -7,7 +7,7 @@
 body {
 	font-family: 'MyWebFont', sans-serif;
 	text-align: center;
-	background-color: #9A9C89;
+	background-color: $beige;
 
 
 }
@@ -20,95 +20,105 @@ header, .main {
 }
 
 header  h1 {
-	color: #4F2728;
+	color: $deepdarkred;
 	font-size: 1.9rem;
 	letter-spacing: -.3rem;
 	margin: .5rem 0 -1rem 0;
 }
 
+//nesting example
 .timeline {
 	margin: 4rem auto 0;
 	width: 550px;
 	position: relative;
-}
 
-.timeline img {
+	img {
 	margin-left: 1.2rem;
 	z-index: 100;
 
+	}
+}
+
+//extend example
+
+%scoreHud {
+	position: absolute;
+	display: block;
+	z-index: 9999;
 }
 
 .armor-icon {
-	position: absolute;
+	@extend %scoreHud;
 	top:-95px;
 	left: 0px;
-	display: block;
-	background-color: #4F2728;
+	background-color: $deepdarkred;
 	height: 90px;
 	width: 90px;
 	margin: 1rem 0;
-	background: url("../img/armor/gallic-f.svg") center center no-repeat;
-	background-size: 90px 90px;
-	z-index: 9999;
+	@include hudImage("../img/armor/gallic-f.svg",90px, 90px );
+
 }
 
 .score {
-	position: absolute;
+	@extend %scoreHud;
 	top: -40px;
-	display: block;
 	height: 60px;
 	width: 70px;
-	background: url("../img/armor/roman-legionary.svg") center center no-repeat;
-	background-size: 60px 60px;
-	z-index: 9999;
-	color: #9D080C;
+	@include hudImage ("../img/armor/roman-legionary.svg", 60px, 60px );
+	color: $deepred;
 }
 
 #msg{
 	margin-top: 1rem;
 	font-size: 2.5rem;
 	height: 2.5rem;
-	color: #9D080C;
+	color: $deepred;
 }
 
-section.emporer-icon img {
-	width: 300px;
-	margin: 2rem 0 .5rem 0;
-	border-radius: 300px;
-	background-color: #9D080C;
-
+// example parent selector
+section {
+	&.emporer-icon img {
+		width: 300px;
+		margin: 2rem 0 .5rem 0;
+		border-radius: 300px;
+		background-color: $deepred;
+	}
+	
+	&.question h2 {
+		font-size: 1rem;
+		margin: 0 0 2rem 0;
+		width: 500px;
+		margin: 0 auto;
+		text-align: justify;
+	}
 
 }
 
-section.question h2 {
-	font-size: 1rem;
-	margin: 0 0 2rem 0;
-	width: 500px;
-	margin: 0 auto;
-	text-align: justify;
-}
+
 
 input[type="radio"] {
 	display: none;
+
+	&:checked + label span{
+	background-color: $deepred;
+	color: $beige;
+	}
 }
 
 
 input[type="radio"] + label span {
 	display: inline-block;
 	cursor: pointer;
-	border: 1px solid #9D080C;
+	border: 1px solid $deepred;
 	margin: 1rem 0;
 	padding: .3rem;
 }
 
-input[type="radio"]:checked + label span{
-	background-color: #9D080C;
-	color: #9A9C89;
-}
+
 
 
 input[type="button"] {
-	background-color: #9D080C;
+	background-color: $deepred;
 	border: none;
 	font-family: 'MyWebFont', sans-serif;
 	font-size: 1.2rem;

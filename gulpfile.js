@@ -26,7 +26,7 @@ var jsFiles = [
 ];
 
 gulp.task('js', function(){
-	gulp.src(jsFiles)
+	return gulp.src(jsFiles)
 		.pipe(concat('app.js'))
 		.pipe(browserify())
 		.pipe(uglify())
@@ -46,9 +46,9 @@ gulp.task('jshint', function(){
 
 //Compile Sass task
 gulp.task('sass', function(){
-	return sass( ['app/scss/*.scss', 'app/scss/**/*.scss'] , {
+	return sass('app/scss/style.scss' , {
 		sourcemap: true,
-		style:'compressed' //expanded
+		style:'expanded' //expanded
 
 	})
 	.on('error', function(err){
@@ -61,7 +61,7 @@ gulp.task('sass', function(){
 
 //Watch task
 gulp.task('watch', function(){
-	gulp.watch('app/js/*.js', ['jshint']);
+	gulp.watch('app/js/*.js', ['jshint', 'js']);
 	gulp.watch(['app/scss/*.scss', 'app/scss/**/*.scss'], ['sass']);
 	gulp.watch('app/*.html', ['html']);
 
