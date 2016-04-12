@@ -30,7 +30,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cleanModules": "rimraf node_modules",
-    "clean": "rmdir /s /q build"
+    "clean": "rmdir /s /q build",
+    "cleanImageDir": "rmdir /s /q build/img"
   },
   "repository": {
     "type": "git",
