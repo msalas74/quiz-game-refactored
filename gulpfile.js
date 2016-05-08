@@ -91,10 +91,10 @@ gulp.task('styles', function() {
 //image optimize task =====================
 gulp.task('images', function() {
 	return gulp.src(['app/img/*', 'app/img/**/*'])
-		.pipe(imagemin({
-			progressive: true,
-			use:[imageminJpegtran({ptogressive: true})]
-		}))
+		// .pipe(imagemin({
+		// 	progressive: true,
+		// 	use:[imageminJpegtran({ptogressive: true})]
+		// }))
 		.pipe(gulp.dest('build/img'));
 });
 
@@ -115,7 +115,7 @@ gulp.task('webserver', function(){
 
 
 //Build task
-if (!environment == 'production') {
+if (environment !== 'production') {
 	gulp.task('build', ['jshint', 'sass', 'html', 'js', 'styles', 'fonts', 'images']);
 } else {
 	gulp.task('build', ['jshint', 'sass', 'html', 'js', 'fonts', 'images']);
