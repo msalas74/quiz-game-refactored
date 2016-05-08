@@ -1,4 +1,4 @@
-# Pirate Bartender
+# Roman Emperor Quiz Game
 
 A Quiz Game about Roman Emperors and the historical impacts they had on the Roman Empire.
 
