@@ -1,6 +1,6 @@
 # Roman Emperor Quiz Game
 
-<<<<<<< HEAD
+
 A Quiz Game about Roman Emperors and the historical impacts they had on the Roman Empire.  An example for object oriented programming.
 
 
@@ -9,15 +9,11 @@ A Quiz Game about Roman Emperors and the historical impacts they had on the Roma
 * Score keeping.
 * Game reset.
 
-=======
-A Quiz Game about Roman Emperors and the historical impacts they had on the Roman Empire.
->>>>>>> fa7e9b788fd3976c13419ac1f68755f9b445d16e
 
 ## Getting Started
 
 Checkout the App from this link [Let's Play!](http://msalas74.github.io/quiz-game-refactored/build/index.html) 
 
-<<<<<<< HEAD
 
 ## Built With
 
@@ -36,24 +32,17 @@ Checkout the App from this link [Let's Play!](http://msalas74.github.io/quiz-gam
 * Randomize questions sequential order.
 
 
-=======
->>>>>>> fa7e9b788fd3976c13419ac1f68755f9b445d16e
+
 ## Authors
 
 * **Matias Salas**
 
-<<<<<<< HEAD
 
-=======
->>>>>>> fa7e9b788fd3976c13419ac1f68755f9b445d16e
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-<<<<<<< HEAD
 
-=======
->>>>>>> fa7e9b788fd3976c13419ac1f68755f9b445d16e
 ## Acknowledgments
 
 * Thinkful - for the project assignment that this app was created for.
