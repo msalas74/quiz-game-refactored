@@ -1,0 +1,46 @@
+{
+  "name": "quiz-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-bower": "0.0.11",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^2.3.1",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-minify-html": "^1.0.5",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^2.0.6",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.1",
+    "gulp-webserver": "^0.9.1",
+    "jshint": "^2.9.1",
+    "node-bourbon": "^4.2.3",
+    "node-neat": "^1.7.2",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "devDependencies": {
+    "gulp-browserify": "^0.5.1",
+    "imagemin-jpegtran": "^4.3.2",
+    "jquery": "^2.2.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cleanModules": "rimraf node_modules",
+    "clean": "rmdir /s /q build",
+    "cleanImageDir": "rmdir /s /q build/img"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msalas74/quiz-game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/msalas74/quiz-game/issues"
+  },
+  "homepage": "https://github.com/msalas74/quiz-game#readme"
+}
