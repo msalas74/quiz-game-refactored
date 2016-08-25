@@ -29,7 +29,10 @@ Checkout the App from this link [Let's Play!](http://msalas74.github.io/quiz-gam
 ## TODO List
 
 * Store data and players highest score in remote database.
+* Re-factor UI/UX
 * Randomize questions sequential order.
+* Re-factor game to incorporate PhaserJS.
+* Add sound and FX.
 
 
 
