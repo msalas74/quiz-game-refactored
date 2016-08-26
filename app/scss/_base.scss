@@ -1,15 +1,7 @@
-@font-face {
-  font-family: 'MyWebFont';
-  src: url('../fonts/Roman_SD-webfont.ttf')  format('truetype');
-       
-}
-
 body {
-	font-family: 'MyWebFont', sans-serif;
+	font-family: $font-main;
 	text-align: center;
 	background-color: $beige;
-
-
 }
 
 
@@ -20,10 +12,11 @@ header, .main {
 }
 
 header  h1 {
+	font-family: $font-headers;
 	color: $deepdarkred;
-	font-size: 1.9rem;
-	letter-spacing: -.3rem;
-	margin: .5rem 0 -1rem 0;
+	font-size: 2.2rem;
+	margin: 1.2rem auto;
+	text-transform: uppercase;
 }
 
 //nesting example
@@ -68,11 +61,19 @@ header  h1 {
 	color: $deepred;
 }
 
+.score-board {
+	margin: 1rem auto;
+	height: 2.5rem;
+}
+
 #msg{
-	margin-top: 1rem;
 	font-size: 2.5rem;
 	height: 2.5rem;
 	color: $deepred;
+}
+
+.question {
+	height: 100px;
 }
 
 // example parent selector
@@ -86,10 +87,8 @@ section {
 	
 	&.question h2 {
 		font-size: 1rem;
-		margin: 0 0 2rem 0;
 		width: 500px;
 		margin: 0 auto;
-		text-align: justify;
 	}
 
 }
@@ -114,15 +113,19 @@ input[type="radio"] + label span {
 	padding: .3rem;
 }
 
-
-
-
 input[type="button"] {
 	background-color: $deepred;
 	border: none;
-	font-family: 'MyWebFont', sans-serif;
+	font-family: $font-headers;
+	text-transform: uppercase;
 	font-size: 1.2rem;
-	margin: 1rem 0 0 0;
+	padding: 0.2rem;
+	margin-bottom: 3rem;
+}
+
+.button {
+	font-family: $font-headers;
+	text-transform: uppercase;
 }
 
 .left {

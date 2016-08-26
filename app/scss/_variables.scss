@@ -1,4 +1,10 @@
+@import url(https://fonts.googleapis.com/css?family=Monda|Old+Standard+TT);
+
 //#4F2728;
 $beige : #9A9C89;
 $deepred : #9D080C;
 $deepdarkred : darken($deepred,15%);
+
+//  font variables
+$font-main: Monda, Helvetica, sans-serif;
+$font-headers: Old Standard TT, serif;

@@ -1,5 +1,6 @@
 # Roman Emperor Quiz Game
 
+
 A Quiz Game about Roman Emperors and the historical impacts they had on the Roman Empire.  An example for object oriented programming.
 
 
@@ -28,7 +29,11 @@ Checkout the App from this link [Let's Play!](http://msalas74.github.io/quiz-gam
 ## TODO List
 
 * Store data and players highest score in remote database.
+* Re-factor UI/UX
 * Randomize questions sequential order.
+* Re-factor game to incorporate PhaserJS.
+* Add sound and FX.
+
 
 
 ## Authors
