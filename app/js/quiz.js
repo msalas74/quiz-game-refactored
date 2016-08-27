@@ -2,14 +2,14 @@
 var $ = require('jquery')
 
 //  create quiz object literal ** refactor **
-var GameQuiz = function(emperor) {
-	this.emperor = emperor
-	this.emperorPath = ''
-	this.quiz = ''
-	this.multiChoice = []
+var GameQuiz = function (emperor) {
+  this.emperor = emperor
+  this.emperorPath = ''
+  this.quiz = ''
+  this.multiChoice = []
 }
 
-//create new object for Sulla and init all properties===== TODO convert to JSON===============
+//  create new object for Sulla and init all properties===== TODO convert to JSON===============
 var Sulla = new GameQuiz('Sulla')
 Sulla.emperorPath = './img/emporers/Sulla.svg'
 Sulla.quiz = 'This Roman was a general and statesman.  He unconstitutionally marched his armies into Rome and defeated Marius in battle.  This action consequently paved the way for future emperors.'
